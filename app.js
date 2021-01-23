@@ -133,7 +133,7 @@ app.get('/', function(req,res,next) {
 app.get('/billing', function(req,res,next) {
   stripe.checkout.sessions.create({
     mode: "subscription",
-    customer_email: user.email,
+    customer_email: passport.user.email,
     payment_method_types: ['card'],
     line_items: [
       {
