@@ -141,8 +141,8 @@ app.get('/billing', function(req,res,next) {
         quantity: 1,
       }
     ],
-    success_url: ':3000/billing?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'http://localhost:3000/billing',
+    success_url: process.env.BASE_URL +':3000/billing?session_id={CHECKOUT_SESSION_ID}',
+    cancel_url: process.env.BASE_URL +':3000/billing',
   }, function(err, session){
     if (err) return next(err);
     res.render('billing', {STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY, sessionId: session.id, subscriptionActive: req.user.subscriptionActive})
