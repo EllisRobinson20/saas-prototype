@@ -131,7 +131,6 @@ app.get('/', function(req,res,next) {
   res.render('index',{title: "SaaS Prototype"})
 })
 app.get('/billing', function(req,res,next) {
-  if (User.subscriptionActive === undefined) {
   stripe.checkout.sessions.create({
     mode: "subscription",
     customer_email: req.user.email,
@@ -148,7 +147,7 @@ app.get('/billing', function(req,res,next) {
     if (err) return next(err);
     res.render('billing', {STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY, sessionId: session.id, subscriptionActive: req.user.subscriptionActive})
   })
-}
+  
 })
 
 app.get('/logout', function(req,res,next) {
