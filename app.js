@@ -141,7 +141,7 @@ app.get('/billing', function(req,res,next) {
         quantity: 1,
       }
     ],
-    success_url: process.env.BASE_URL +':3000/billing?session_id={CHECKOUT_SESSION_ID}',
+    success_url: process.env.BASE_URL +':3000',
     cancel_url: process.env.BASE_URL +':3000/billing',
   }, function(err, session){
     if (err) return next(err);
