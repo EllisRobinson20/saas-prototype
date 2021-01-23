@@ -131,7 +131,7 @@ app.get('/', function(req,res,next) {
   res.render('index',{title: "SaaS Prototype"})
 })
 app.get('/billing', function(req,res,next) {
-  if (User.subscriptionActive === false) {
+  if (User.subscriptionActive === undefined) {
   stripe.checkout.sessions.create({
     mode: "subscription",
     customer_email: req.user.email,
