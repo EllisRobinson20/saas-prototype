@@ -20,6 +20,12 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <script>
+        !function(o,p,s,e,c){
+            var i,a,h,u=[],d=[];function t(){var t="You must provide a supported major version.";try{if(!c)throw new Error(t);var e,n="https://cdn.smooch.io/",r="smooch";if((e="string"==typeof this.response?JSON.parse(this.response):this.response).url){var o=p.getElementsByTagName("script")[0],s=p.createElement("script");s.async=!0;var i=c.match(/([0-9]+).?([0-9]+)?.?([0-9]+)?/),a=i&&i[1];if(i&&i[3])s.src=n+r+"."+c+".min.js";else{if(!(4<=a&&e["v"+a]))throw new Error(t);s.src=e["v"+a]}o.parentNode.insertBefore(s,o)}}catch(e){e.message===t&&console.error(e)}}o[s]={init:function(){i=arguments;var t={then:function(e){return d.push({type:"t",next:e}),t},catch:function(e){return d.push({type:"c",next:e}),t}};return t},on:function(){u.push(arguments)},render:function(){a=arguments},destroy:function(){h=arguments}},o.__onWebMessengerHostReady__=function(e){if(delete o.__onWebMessengerHostReady__,o[s]=e,i)for(var t=e.init.apply(e,i),n=0;n<d.length;n++){var r=d[n];t="t"===r.type?t.then(r.next):t.catch(r.next)}a&&e.render.apply(e,a),h&&e.destroy.apply(e,h);for(n=0;n<u.length;n++)e.on.apply(e,u[n])};var n=new XMLHttpRequest;n.addEventListener("load",t),n.open("GET","https://"+e+".webloader.smooch.io/",!0),n.responseType="json",n.send()
+        }(window,document,"Smooch","60355f8cd79177000c6fc680","5");
+    </script>
+
 </head>
 
 <body id="page-top">
@@ -137,7 +143,7 @@
 
             </div>
             <!-- End of Main Content -->
-            <div><!-- this is embedded from zoho-->
+           <!-- <div> this is embedded from zoho
                 <script>var I18NObject = new Object(); function I18N() { } I18N.initialize = function () { I18NObject['js.validator.vulnerable.msg'] = '\"$0\" field has vulnerable content.'; I18NObject['js.validator.empty.msg'] = '\"$0\" cannot be empty.'; I18NObject['js.validator.length.msg'] = '\"$0\" exceeds the limit. Please keep the length within $1.'; I18NObject['js.validator.invalid.msg'] = '\"$0\" has invalid content. Please change to the format shown below.'; I18NObject['js.validator.number.msg'] = '\"$0\" value must be numeric.'; I18NObject['js.validator.float.msg'] = '\"$0\" value must be numeric.'; I18NObject['js.validator.double.msg'] = '\"$0\" value must be numeric.'; I18NObject['js.validator.email.msg'] = 'Email id format should be like \"support@zohocorp.com\"'; I18NObject['js.validator.phone.msg'] = 'Only numbers(0-9), \"+\" and \"-\" are allowed.'; I18NObject['js.validator.length.decimal.errmsg'] = 'Decimal places should not be more than $0.<br> Please check and correct the value of $1.'; I18NObject['js.validator.date.errmsg'] = 'Date value \"$0\" mentioned in $1 is invalid. Please follow the format \"$2\" or pick it from the calendar.'; I18NObject['js.validator.website.msg'] = 'Please Enter a valid URL.'; I18NObject['js.validator.zip.msg'] = 'Only numbers(0-9), \"-\" are allowed.'; } </script>
                 <script type='text/javascript' src='https://js.zohostatic.eu/contactmanager/v149/js/webtocontactscript.js'></script>
                 <div id='WebToEntityForm'
@@ -177,7 +183,7 @@
                                 type='reset'>Reset</button> </div>
                     </form>
                 </div>
-            </div>
+            </div> -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -229,6 +235,9 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <script>
+Smooch.init({ integrationId: '60355f8cd79177000c6fc680' });
+</script>
 </body>
 
 </html>
